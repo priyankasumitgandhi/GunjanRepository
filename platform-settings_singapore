@@ -1,0 +1,22 @@
+{
+	"PlatformSettingsConfig": {
+		"AdministratorUserSettings": {
+			"InitialPassword": "trUf6yuz2?_Gub"
+		},
+		"LicensingConnectionSettings": {
+          "username":"harishkumar.m@keppelom.com",
+          "password":"Keppel@123",
+          "timeout":"300"
+        } 
+	},
+	"PersistenceProviderPackageConfigs": {
+		"MssqlPersistenceProviderPackage": {
+			"ConnectionInformation": {
+			    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+				"jdbcUrl": "jdbc:sqlserver://10.58.136.61:1399;databaseName=thingworx1;applicationName=Thingworx1;",	
+				"password": "Keppel@pwd",
+				"username": "twadmin1"
+			}
+		}
+	}
+}
