@@ -15,9 +15,9 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2020-01-02T16:36:07.831+05:30"
-         name="ThingTestVolvoDataFilter"
-         projectName="DataFilter"
+         lastModifiedDate="2019-12-02T16:41:30.446+05:30"
+         name="testthing1"
+         projectName="P1"
          published="false"
          tags=""
          thingTemplate="GenericThing"
@@ -32,7 +32,12 @@
             </DesignTimePermissions>
             <RunTimePermissions></RunTimePermissions>
             <VisibilityPermissions>
-                <Visibility></Visibility>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Nonadmin1"
+                     type="Organization"></Principal>
+                </Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
@@ -47,10 +52,9 @@
                      isLocalOnly="false"
                      isOpen="false"
                      isPrivate="false"
-                     name="GetDataIntoDataFilter">
+                     name="testserviceJS">
                         <ResultType
-                         aspect.dataShape="DataFilterVolvoTestCase"
-                         baseType="INFOTABLE"
+                         baseType="NOTHING"
                          description=""
                          name="result"
                          ordinal="0"></ResultType>
@@ -63,7 +67,7 @@
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
-                     name="GetDataIntoDataFilter">
+                     name="testserviceJS">
                         <ConfigurationTables>
                             <ConfigurationTable
                              description=""
@@ -83,13 +87,7 @@
                                     <Row>
                                         <code>
                                         <![CDATA[
-                                        var params = {
-                                        	infoTableName: undefined /* STRING */,
-                                        	dataShapeName: "DataFilterVolvoTestCase" /* DATASHAPENAME */
-                                        };
-                                        
-                                        // result: INFOTABLE
-                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        logger.info("hello");
                                         ]]>
                                         </code>
                                     </Row>
