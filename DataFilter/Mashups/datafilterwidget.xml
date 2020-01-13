@@ -16,7 +16,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2020-01-07T13:23:41.934+05:30"
+         lastModifiedDate="2020-01-13T11:23:37.559+05:30"
          name="datafilterwidget"
          projectName="DataFilter"
          rows="0.0"
@@ -254,6 +254,13 @@
                   "Rows" : 0,
                   "ShowDataLoading" : true,
                   "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : { },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
                   "StyleTheme" : "PTC Convergence Theme",
                   "Title" : "",
                   "TitleBar" : false,
@@ -268,7 +275,7 @@
                   "Width" : 1024,
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
-                  "id_index" : 6,
+                  "id_index" : 8,
                   "supportsAutoResize" : true
                 },
                 "Widgets" : [ {
@@ -909,6 +916,36 @@
                       "Width" : 400,
                       "Z-index" : 10,
                       "__TypeDisplayName" : "Grid"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "Counter" : false,
+                      "Disabled" : false,
+                      "DisplayName" : "ptcs-textfield-8",
+                      "HasText" : false,
+                      "Id" : "ptcstextfield-8",
+                      "Label" : "",
+                      "LabelAlignment" : "left",
+                      "LastContainer" : false,
+                      "Left" : 105,
+                      "Margin" : "5",
+                      "MaxNumberOfCharacters" : 1000000,
+                      "Password" : false,
+                      "ReadOnly" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowClearText" : true,
+                      "ShowDataLoading" : true,
+                      "TabSequence" : 0,
+                      "TextAlignment" : "left",
+                      "Top" : 170,
+                      "Type" : "ptcstextfield",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Width" : 273,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Text Field"
                     },
                     "Widgets" : [ ]
                   } ]
