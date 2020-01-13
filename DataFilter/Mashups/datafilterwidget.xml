@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2020-01-07T13:23:41.934+05:30"
+         name="datafilterwidget"
+         projectName="DataFilter"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>testcustomerdatafiltertable</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates>
+                <ThingTemplate>IndustrialGateway</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_IndustrialGateway" : {
+                  "DataName" : "ThingTemplates_IndustrialGateway",
+                  "EntityName" : "IndustrialGateway",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "ff25ee46-03e7-48bf-be66-35c8b2dba57b",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "aeedccb9-44af-4970-9dae-4573dfeef603",
+                    "Name" : "QueryImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryImplementingThingsWithData"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "6208e139-7c18-4e44-889d-80503491ccc0",
+                    "Name" : "GetImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThingsWithData"
+                  } ]
+                },
+                "Things_testcustomerdatafiltertable" : {
+                  "DataName" : "Things_testcustomerdatafiltertable",
+                  "EntityName" : "testcustomerdatafiltertable",
+                  "EntityType" : "Things",
+                  "Id" : "ab22ae53-d3b9-46e8-911b-3fa10cd7eb28",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "0d78354b-8d5d-4bda-9d3d-c556414af4fe",
+                    "Name" : "test",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "test"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "3c8afa7b-10ef-4db4-a448-d2614bb0cd9c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_IndustrialGateway",
+                "TargetArea" : "UI",
+                "TargetId" : "datafilter-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "cef92cf3-bc14-4355-b7a6-56c59252f062",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "QUERY",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Query",
+                  "TargetPropertyBaseType" : "QUERY",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "test",
+                "SourceSection" : "Things_testcustomerdatafiltertable",
+                "TargetArea" : "UI",
+                "TargetId" : "datafilter-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "d633c983-70d6-42af-bbdf-9d3ec441454a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Query",
+                  "SourcePropertyBaseType" : "QUERY",
+                  "TargetProperty" : "query",
+                  "TargetPropertyBaseType" : "QUERY",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "datafilter-3",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "QueryImplementingThingsWithData",
+                "TargetSection" : "ThingTemplates_IndustrialGateway"
+              }, {
+                "Id" : "0da0642f-758c-44ab-9402-ba7aea5a9e81",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_IndustrialGateway",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxgrid-4",
+                "TargetSection" : ""
+              }, {
+                "Id" : "0792c8f9-ef31-4142-86e2-2e45a0ea4854",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Query",
+                  "SourcePropertyBaseType" : "QUERY",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Query",
+                  "TargetPropertyBaseType" : "QUERY",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "datafilter-3",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "datafilter-6",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_testcustomerdatafiltertable",
+                "EventHandlerService" : "test",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "97d2b9a0-7d15-4b09-af81-ff74978fe6a8"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_IndustrialGateway",
+                "EventHandlerService" : "QueryImplementingThingsWithData",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Changed",
+                "EventTriggerId" : "datafilter-3",
+                "EventTriggerSection" : "",
+                "Id" : "967d3bae-aae4-4acc-a88d-f4bd9e8a1d0c"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 6,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "row",
+                    "flex-grow" : "1",
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : "1",
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AddButtonStyle" : "DefaultDataFilterAddButtonStyle",
+                      "Area" : "UI",
+                      "BarStyle" : "DefaultDataFilterStyle",
+                      "ColumnFormat" : "{\"ActiveTagCount\":{\"sourceType\":\"Unknown\",\"name\":\"ActiveTagCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"avatar\":{\"name\":\"avatar\",\"aspects\":{},\"description\":\"Avatar image\",\"baseType\":\"IMAGELINK\",\"ordinal\":5},\"ClientCount\":{\"sourceType\":\"Unknown\",\"name\":\"ClientCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ConfigurationPullStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ConfigurationPullStatus\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":-1,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status code for PullConfigFromEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ConfigurationPushStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ConfigurationPushStatus\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":-1,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status code for PushConfigToEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"DatastoreAttachError\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreAttachError\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreCurrentSizeMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreCurrentSizeMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DatastoreDiskFull\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreDiskFull\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreFull\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreFull\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreRemainingSpaceMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreRemainingSpaceMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DatastoreUseableDiskSpaceMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreUseableDiskSpaceMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DateTime\":{\"sourceType\":\"Unknown\",\"name\":\"DateTime\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"description\":{\"sourceType\":\"Unknown\",\"name\":\"description\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing description\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"DroppedUpdates\":{\"sourceType\":\"Unknown\",\"name\":\"DroppedUpdates\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ExpiredFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"ExpiredFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"ForwardModeStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ForwardModeStatus\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"FullProjectName\":{\"sourceType\":\"Unknown\",\"name\":\"FullProjectName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"homeMashup\":{\"name\":\"homeMashup\",\"aspects\":{},\"description\":\"Home mashup\",\"baseType\":\"MASHUPNAME\",\"ordinal\":4},\"Hostname\":{\"sourceType\":\"Unknown\",\"name\":\"Hostname\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"IndustrialFileRepository\":{\"sourceType\":\"Unknown\",\"name\":\"IndustrialFileRepository\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":\"SystemRepository\",\"isPersistent\":true,\"thingTemplate\":\"FileRepository\",\"isHidden\":\"true\"},\"isLocalOnly\":false,\"description\":\"File Repository for Industrial Configurations\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"THINGNAME\",\"ordinal\":0},\"IndustrialThingCount\":{\"sourceType\":\"Unknown\",\"name\":\"IndustrialThingCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"isConnected\":{\"sourceType\":\"Unknown\",\"name\":\"isConnected\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":false,\"isPersistent\":false},\"isLocalOnly\":true,\"description\":\"Flag indicating if connected or not\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"isReporting\":{\"sourceType\":\"Unknown\",\"name\":\"isReporting\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":false,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Health of this device's connection\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"isSystemObject\":{\"name\":\"isSystemObject\",\"aspects\":{},\"description\":\"Indicates if a system object or not\",\"baseType\":\"BOOLEAN\",\"ordinal\":1},\"lastConnection\":{\"sourceType\":\"Unknown\",\"name\":\"lastConnection\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":true,\"description\":\"Last connection time\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"LicensedFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"LicensedFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"name\":{\"sourceType\":\"Unknown\",\"name\":\"name\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing name\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"OpcClientNames\":{\"sourceType\":\"Unknown\",\"name\":\"OpcClientNames\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"ProductName\":{\"sourceType\":\"Unknown\",\"name\":\"ProductName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProductVersion\":{\"sourceType\":\"Unknown\",\"name\":\"ProductVersion\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProjectName\":{\"sourceType\":\"Unknown\",\"name\":\"ProjectName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProjectTitle\":{\"sourceType\":\"Unknown\",\"name\":\"ProjectTitle\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"PropertyCount\":{\"sourceType\":\"Unknown\",\"name\":\"PropertyCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"PushStatusMessage\":{\"sourceType\":\"Unknown\",\"name\":\"PushStatusMessage\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status message for PushConfigToEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"STRING\",\"ordinal\":0},\"reportingLastChange\":{\"sourceType\":\"Unknown\",\"name\":\"reportingLastChange\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":false,\"description\":\"Last time isReporting value changed\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"reportingLastEvaluation\":{\"sourceType\":\"Unknown\",\"name\":\"reportingLastEvaluation\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":false,\"description\":\"Last time evaluated for Reporting\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"StoreAndForwardEnabledStatus\":{\"sourceType\":\"Unknown\",\"name\":\"StoreAndForwardEnabledStatus\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"tags\":{\"sourceType\":\"Unknown\",\"name\":\"tags\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"tagType\":\"ModelTags\",\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Tags\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"TAGS\",\"ordinal\":0},\"thingTemplate\":{\"sourceType\":\"Unknown\",\"name\":\"thingTemplate\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Template\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"THINGTEMPLATENAME\",\"ordinal\":0},\"TimeLimitedFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"TimeLimitedFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"TotalTagCount\":{\"sourceType\":\"Unknown\",\"name\":\"TotalTagCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"UpdatesPerSecond\":{\"sourceType\":\"Unknown\",\"name\":\"UpdatesPerSecond\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0}}",
+                      "DateFormat" : "",
+                      "DateFormatToken" : "",
+                      "DisplayName" : "datafilter-3",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "Height" : 26,
+                      "Horizontal" : false,
+                      "Id" : "datafilter-3",
+                      "LastContainer" : false,
+                      "Left" : 295,
+                      "LiveFiltering" : false,
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "ShowAdvancedOptions" : true,
+                      "ShowDataLoading" : false,
+                      "SortFilters" : true,
+                      "TabSequence" : 0,
+                      "Top" : 160,
+                      "Type" : "datafilter",
+                      "Visible" : true,
+                      "Width" : 385,
+                      "Z-index" : 9000,
+                      "__TypeDisplayName" : "Data filter"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AddButtonStyle" : "DefaultDataFilterAddButtonStyle",
+                      "Area" : "UI",
+                      "BarStyle" : "DefaultDataFilterStyle",
+                      "ColumnFormat" : "{\"ActiveTagCount\":{\"sourceType\":\"Unknown\",\"name\":\"ActiveTagCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"avatar\":{\"name\":\"avatar\",\"aspects\":{},\"description\":\"Avatar image\",\"baseType\":\"IMAGELINK\",\"ordinal\":5},\"ClientCount\":{\"sourceType\":\"Unknown\",\"name\":\"ClientCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ConfigurationPullStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ConfigurationPullStatus\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":-1,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status code for PullConfigFromEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ConfigurationPushStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ConfigurationPushStatus\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":-1,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status code for PushConfigToEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"DatastoreAttachError\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreAttachError\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreCurrentSizeMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreCurrentSizeMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DatastoreDiskFull\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreDiskFull\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreFull\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreFull\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"DatastoreRemainingSpaceMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreRemainingSpaceMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DatastoreUseableDiskSpaceMB\":{\"sourceType\":\"Unknown\",\"name\":\"DatastoreUseableDiskSpaceMB\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":0},\"DateTime\":{\"sourceType\":\"Unknown\",\"name\":\"DateTime\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"description\":{\"sourceType\":\"Unknown\",\"name\":\"description\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing description\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"DroppedUpdates\":{\"sourceType\":\"Unknown\",\"name\":\"DroppedUpdates\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"ExpiredFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"ExpiredFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"ForwardModeStatus\":{\"sourceType\":\"Unknown\",\"name\":\"ForwardModeStatus\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"FullProjectName\":{\"sourceType\":\"Unknown\",\"name\":\"FullProjectName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"homeMashup\":{\"name\":\"homeMashup\",\"aspects\":{},\"description\":\"Home mashup\",\"baseType\":\"MASHUPNAME\",\"ordinal\":4},\"Hostname\":{\"sourceType\":\"Unknown\",\"name\":\"Hostname\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"IndustrialFileRepository\":{\"sourceType\":\"Unknown\",\"name\":\"IndustrialFileRepository\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":\"SystemRepository\",\"isPersistent\":true,\"thingTemplate\":\"FileRepository\",\"isHidden\":\"true\"},\"isLocalOnly\":false,\"description\":\"File Repository for Industrial Configurations\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"THINGNAME\",\"ordinal\":0},\"IndustrialThingCount\":{\"sourceType\":\"Unknown\",\"name\":\"IndustrialThingCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"isConnected\":{\"sourceType\":\"Unknown\",\"name\":\"isConnected\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":false,\"isPersistent\":false},\"isLocalOnly\":true,\"description\":\"Flag indicating if connected or not\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"isReporting\":{\"sourceType\":\"Unknown\",\"name\":\"isReporting\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":false,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Health of this device's connection\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"isSystemObject\":{\"name\":\"isSystemObject\",\"aspects\":{},\"description\":\"Indicates if a system object or not\",\"baseType\":\"BOOLEAN\",\"ordinal\":1},\"lastConnection\":{\"sourceType\":\"Unknown\",\"name\":\"lastConnection\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":true,\"description\":\"Last connection time\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"LicensedFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"LicensedFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"name\":{\"sourceType\":\"Unknown\",\"name\":\"name\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing name\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"OpcClientNames\":{\"sourceType\":\"Unknown\",\"name\":\"OpcClientNames\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"ProductName\":{\"sourceType\":\"Unknown\",\"name\":\"ProductName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProductVersion\":{\"sourceType\":\"Unknown\",\"name\":\"ProductVersion\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProjectName\":{\"sourceType\":\"Unknown\",\"name\":\"ProjectName\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"ProjectTitle\":{\"sourceType\":\"Unknown\",\"name\":\"ProjectTitle\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"PropertyCount\":{\"sourceType\":\"Unknown\",\"name\":\"PropertyCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"PushStatusMessage\":{\"sourceType\":\"Unknown\",\"name\":\"PushStatusMessage\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false},\"isLocalOnly\":false,\"description\":\"Status message for PushConfigToEdge\",\"sourceName\":\"\",\"category\":\"Configuration\",\"baseType\":\"STRING\",\"ordinal\":0},\"reportingLastChange\":{\"sourceType\":\"Unknown\",\"name\":\"reportingLastChange\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":false,\"description\":\"Last time isReporting value changed\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"reportingLastEvaluation\":{\"sourceType\":\"Unknown\",\"name\":\"reportingLastEvaluation\",\"aspects\":{\"isReadOnly\":true,\"defaultValue\":0,\"isPersistent\":true},\"isLocalOnly\":false,\"description\":\"Last time evaluated for Reporting\",\"sourceName\":\"\",\"category\":\"ConnectionStatus\",\"baseType\":\"DATETIME\",\"ordinal\":0},\"StoreAndForwardEnabledStatus\":{\"sourceType\":\"Unknown\",\"name\":\"StoreAndForwardEnabledStatus\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"BOOLEAN\",\"ordinal\":0},\"tags\":{\"sourceType\":\"Unknown\",\"name\":\"tags\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"tagType\":\"ModelTags\",\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Tags\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"TAGS\",\"ordinal\":0},\"thingTemplate\":{\"sourceType\":\"Unknown\",\"name\":\"thingTemplate\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Template\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"THINGTEMPLATENAME\",\"ordinal\":0},\"TimeLimitedFeatures\":{\"sourceType\":\"Unknown\",\"name\":\"TimeLimitedFeatures\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0,\"dataShape\":\"StringArrayElement\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INFOTABLE\",\"ordinal\":0,\"dataShape\":{\"fieldDefinitions\":{\"element\":{\"name\":\"element\",\"aspects\":{},\"description\":\"\",\"baseType\":\"STRING\",\"ordinal\":1}}}},\"TotalTagCount\":{\"sourceType\":\"Unknown\",\"name\":\"TotalTagCount\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0},\"UpdatesPerSecond\":{\"sourceType\":\"Unknown\",\"name\":\"UpdatesPerSecond\",\"aspects\":{\"isReadOnly\":true,\"dataChangeThreshold\":0,\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"INTEGER\",\"ordinal\":0}}",
+                      "DateFormat" : "",
+                      "DateFormatToken" : "",
+                      "DisplayName" : "datafilter-6",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "Height" : 26,
+                      "Horizontal" : false,
+                      "Id" : "datafilter-6",
+                      "LastContainer" : false,
+                      "Left" : 295,
+                      "LiveFiltering" : false,
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "ShowAdvancedOptions" : true,
+                      "ShowDataLoading" : false,
+                      "SortFilters" : true,
+                      "TabSequence" : 0,
+                      "Top" : 160,
+                      "Type" : "datafilter",
+                      "Visible" : true,
+                      "Width" : 385,
+                      "Z-index" : 9000,
+                      "__TypeDisplayName" : "Data filter"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlignHeader" : false,
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "CellTextWrapping" : false,
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "ActiveTagCount",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "ActiveTagCount",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "ClientCount",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "ClientCount",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "ConfigurationPullStatus",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "ConfigurationPullStatus",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "ConfigurationPushStatus",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "ConfigurationPushStatus",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreAttachError",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "DatastoreAttachError",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreCurrentSizeMB",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "renderer" : "NUMBER"
+                          },
+                          "Title" : "DatastoreCurrentSizeMB",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreDiskFull",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "DatastoreDiskFull",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreFull",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "DatastoreFull",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreRemainingSpaceMB",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "renderer" : "NUMBER"
+                          },
+                          "Title" : "DatastoreRemainingSpaceMB",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "DatastoreUseableDiskSpaceMB",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "renderer" : "NUMBER"
+                          },
+                          "Title" : "DatastoreUseableDiskSpaceMB",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "DateTime",
+                          "FormatOptions" : {
+                            "FormatString" : "[[dateTimeFormat_Default]]",
+                            "renderer" : "DATETIME"
+                          },
+                          "Title" : "DateTime",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "description",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "description",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "DroppedUpdates",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "DroppedUpdates",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ExpiredFeatures",
+                          "FormatOptions" : {
+                            "renderer" : "DEFAULT"
+                          },
+                          "Title" : "ExpiredFeatures",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ForwardModeStatus",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "ForwardModeStatus",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "FullProjectName",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "FullProjectName",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "Hostname",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Hostname",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "IndustrialFileRepository",
+                          "FormatOptions" : {
+                            "FormatString" : "text",
+                            "renderer" : "THINGNAME"
+                          },
+                          "Title" : "IndustrialFileRepository",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "IndustrialThingCount",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "IndustrialThingCount",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "isConnected",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "isConnected",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "isReporting",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "isReporting",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "lastConnection",
+                          "FormatOptions" : {
+                            "FormatString" : "[[dateTimeFormat_Default]]",
+                            "renderer" : "DATETIME"
+                          },
+                          "Title" : "lastConnection",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "LicensedFeatures",
+                          "FormatOptions" : {
+                            "renderer" : "DEFAULT"
+                          },
+                          "Title" : "LicensedFeatures",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "name",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "name",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "OpcClientNames",
+                          "FormatOptions" : {
+                            "renderer" : "DEFAULT"
+                          },
+                          "Title" : "OpcClientNames",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ProductName",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "ProductName",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ProductVersion",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "ProductVersion",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ProjectName",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "ProjectName",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "ProjectTitle",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "ProjectTitle",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "PropertyCount",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "PropertyCount",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "PushStatusMessage",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "PushStatusMessage",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "reportingLastChange",
+                          "FormatOptions" : {
+                            "FormatString" : "[[dateTimeFormat_Default]]",
+                            "renderer" : "DATETIME"
+                          },
+                          "Title" : "reportingLastChange",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "reportingLastEvaluation",
+                          "FormatOptions" : {
+                            "FormatString" : "[[dateTimeFormat_Default]]",
+                            "renderer" : "DATETIME"
+                          },
+                          "Title" : "reportingLastEvaluation",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "StoreAndForwardEnabledStatus",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "StoreAndForwardEnabledStatus",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "tags",
+                          "FormatOptions" : {
+                            "FormatString" : "plain",
+                            "renderer" : "TAGS"
+                          },
+                          "Title" : "tags",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "thingTemplate",
+                          "FormatOptions" : {
+                            "FormatString" : "text",
+                            "renderer" : "THINGTEMPLATENAME"
+                          },
+                          "Title" : "thingTemplate",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "TimeLimitedFeatures",
+                          "FormatOptions" : {
+                            "renderer" : "DEFAULT"
+                          },
+                          "Title" : "TimeLimitedFeatures",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "TotalTagCount",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "TotalTagCount",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "right",
+                          "AllowEdit" : false,
+                          "FieldName" : "UpdatesPerSecond",
+                          "FormatOptions" : {
+                            "FormatString" : "0",
+                            "renderer" : "INTEGER"
+                          },
+                          "Title" : "UpdatesPerSecond",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "isSystemObject",
+                          "FormatOptions" : {
+                            "FormatString" : "checkbox",
+                            "renderer" : "BOOLEAN"
+                          },
+                          "Title" : "isSystemObject",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "homeMashup",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "homeMashup",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "avatar",
+                          "FormatOptions" : {
+                            "FormatString" : "image",
+                            "renderer" : "IMAGELINK"
+                          },
+                          "Title" : "avatar",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        } ]
+                      },
+                      "CurrentScrollTop" : 0,
+                      "DisplayName" : "dhxgrid-4",
+                      "FocusStyle" : "DefaultFocusStyle",
+                      "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                      "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                      "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                      "GridHeaderTextCase" : "capitalize",
+                      "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                      "Height" : 200,
+                      "Id" : "dhxgrid-4",
+                      "IsEditable" : false,
+                      "IsPrintLayout" : false,
+                      "LastContainer" : false,
+                      "Left" : 220,
+                      "Margin" : "5",
+                      "MultiSelect" : false,
+                      "ResponsiveLayout" : false,
+                      "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                      "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "RowHeight" : 30,
+                      "RowHoverStyle" : "DefaultRowHoverStyle",
+                      "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                      "ScrollTop" : 0,
+                      "ShowAllColumns" : false,
+                      "ShowDataLoading" : true,
+                      "TabSequence" : 0,
+                      "Top" : 100,
+                      "Type" : "dhxgrid",
+                      "Visible" : true,
+                      "Width" : 400,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Grid"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
